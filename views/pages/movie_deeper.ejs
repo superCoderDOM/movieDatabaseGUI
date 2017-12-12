@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>movieDB | <%= currentMovie.title %></title>
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../myStyles.css">
+    </head>
+
+    <body>
+
+        <div class="top-bar">
+            <img src="../movieCam.png" class="top-bar-logo">
+            <h1 class="top-bar-title">Movie Database</h1>
+            <span class="top-bar-nav">
+                <a class="nav-item active" href="../">Home</a>
+            </span>
+            <span class="top-bar-nav">
+                <a class="nav-item active" href="#" onClick="history.go(-1);return true;">Back</a>
+            </span>
+            <!-- search bar to look for movie titles by keywords -->
+            <div class="search-bar row">
+                <form action="../search" method="get">
+                    <input type="text" class="search-bar__box form-control" name="keywords" placeholder="Search for movies by title...">
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div id="movie-details">
+                <div class="row">
+                    <div class="movie-title col-xs-12">
+                        <span class="movie-title-text"><h1><%= currentMovie.title %></h1></span>
+                        <span class="movie-title-extra badge"><%= currentMovie.vote_average %> / 10</span>
+                        <span class="movie-title-extra"><%= currentMovie.runtime %> min</span>
+                    </div>
+                </div>
+                <div class="movie-info row">
+                    <div class="col-xs-5">
+                        <a href="<%= imagePath + currentMovie.poster_path %>" target="_blank"><img class="movie-poster" src="<%= imagePath + currentMovie.poster_path %>" /></a>
+                    </div>
+                    <div class="col-xs-7">
+                    <% if (currentMovie.tagline) { %>
+                        <div class="movie-descriptor"><h4><em>"<%= currentMovie.tagline %>"</em></h4></div>
+                    <% } %>
+                        <div class="movie-descriptor"><%= currentMovie.overview %></div>
+                        <div class="movie-descriptor"><strong>Genres: </strong><%= currentMovie.genres %></div>
+                        <div class="movie-descriptor"><strong>Released: </strong><%= currentMovie.release_date %></div>
+                        <div class="movie-descriptor"><strong>Language: </strong><%= currentMovie.original_language %></div>
+                    <% if (currentMovie.homepage) { %>
+                        <div class="movie-descriptor"><strong>Official Site: </strong><a href="<%= currentMovie.homepage %>" target="_blank"><%= currentMovie.homepage %></a></div>
+                    <% } %>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

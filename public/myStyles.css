@@ -1,0 +1,103 @@
+body {
+  font-family: "Montserrat", sans-serif; }
+
+.container {
+  margin-top: 100px;
+  min-width: 450px;
+  background-color: #fdffe9; }
+
+h2 {
+  color: #114355; }
+
+#movie-details .movie-descriptor {
+  padding-bottom: 1em; }
+#movie-details .movie-info {
+  padding-bottom: 1em; }
+#movie-details .movie-poster {
+  min-height: 350px;
+  min-width: 262px; }
+#movie-details .movie-title-text {
+  display: inline-block;
+  font-weight: bold;
+  width: 60%; }
+#movie-details .movie-title-extra {
+  float: right;
+  margin-right: 20px;
+  margin-top: 40px;
+  width: 10%; }
+
+.movie-list-item {
+  padding: 10px;
+  cursor: pointer; }
+  .movie-list-item .poster-container {
+    height: 200px;
+    width: 150px; }
+  .movie-list-item .movie-poster {
+    max-height: 200px;
+    max-width: 150px; }
+
+.movie-list-item:hover {
+  background-color: #ccff99; }
+
+.movie-link {
+  color: inherit; }
+
+.movie-link:hover {
+  color: inherit;
+  text-decoration: none; }
+
+.movie-poster {
+  border: thin solid #114355;
+  box-shadow: 5px 5px 5px #114355; }
+
+.nav-item {
+  color: #fdffe9;
+  font-size: 1.5em; }
+
+.nav-item:hover {
+  color: #ccff99;
+  text-decoration: none; }
+
+.released-date {
+  margin-top: 20px; }
+
+.search-bar__box {
+  height: 30px;
+  position: relative;
+  top: 20px;
+  width: 100%; }
+
+.table {
+  table-layout: fixed;
+  word-wrap: break-word; }
+
+.top-bar {
+  background-color: #081c24;
+  left: 0;
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; }
+
+.top-bar-logo {
+  background-color: #66ff33;
+  border-radius: 5px;
+  display: inline-block;
+  height: 40px;
+  margin-left: 0.5em;
+  width: 40px; }
+
+.top-bar-nav {
+  margin-top: 0.5em;
+  float: right;
+  margin-right: 2em;
+  vertical-align: bottom; }
+
+.top-bar-title {
+  color: #fdffe9;
+  display: inline;
+  margin-left: 0.5em;
+  vertical-align: middle; }
+
+/*# sourceMappingURL=myStyles.css.map */
